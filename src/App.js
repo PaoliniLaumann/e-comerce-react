@@ -1,16 +1,17 @@
-import React from 'react';
-import './App.css';
-import NavBar from './components/NavBar';
+import React from "react";
+import "./App.css";
+import ItemListConteiner from "./components/ItemListConteiner";
+
+import NavBar from "./components/NavBar";
 
 function App() {
-let i = 0;
-i = i + 1;
-console.log(i);
-
+  const mensaje = "Mi primer E-comerce con React";
+  const mensaje2 = "German Paolini";
 
   return (
     <>
-    <NavBar />
+      <NavBar />
+      <ItemListConteiner mensaje={mensaje} mensaje2={mensaje2} />
     </>
   );
 }
