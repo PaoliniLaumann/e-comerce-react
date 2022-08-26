@@ -3,5 +3,11 @@
 }
 
 .estilo {
-  color: rgb(35, 10, 147);
+  color: rgb(7, 4, 21);
+  background-color: bisque;
+  
+}
+
+.margen {
+  margin-left: 5rem;
 }
