@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
+
 const ItemCount = (props) => {
   const { stock, initial, onAdd } = props;
   
@@ -10,9 +11,8 @@ const ItemCount = (props) => {
 
   return (
     <div>
-      <Stack spacing={2} direction="row">
-        <Button
-          variant="contained"
+      <Stack spacing={2} direction="row" size="medium" >
+        <Button variant="contained" 
           onClick={() => {
             if (contador < stock){
               setContador(contador + 1);
@@ -34,7 +34,7 @@ const ItemCount = (props) => {
         </Button>
       </Stack>
       <br />
-      <Button variant="contained" disableElevation onClick={() => {
+      <Button variant="contained" size="medium"  disableElevation onClick={() => {
             onAdd(contador);
             setContador(initial);
           }} >

@@ -57,7 +57,7 @@ const NavBar = () => {
               textDecoration: "none",
             }}
           >
-            E-COMERCE
+            Compu Mundo
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -113,7 +113,8 @@ const NavBar = () => {
               textDecoration: "none",
             }}
           >
-            E-COMERCE
+            Compu <br />
+            Mundo
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
