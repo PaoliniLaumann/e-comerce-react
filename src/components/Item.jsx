@@ -5,15 +5,18 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Grid } from "@mui/material";
+import { Box } from "@mui/system";
 
 
 const Item = ({ item }) => {
   return (
-       
-        <Card sx={{ maxWidth: 280, m: 2 }}>
+       <Grid container>
+        <Grid item xs={12} sm={6} md={4} xl={3}>
+            <Box>
+                <Card sx={{ m: 2 }}>
           <CardMedia
-            component="img"
-            height="160"
+            component="img"            
             image="https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30646_Notebook_Gamer_AORUS_XD_15.6__Core_I7_11800H_16GB__2x8GB__1TB_SSD_NVMe_RTX_3070_240Hz_W11_Home_316bec6c-grn.jpg"
             alt="green iguana"
           />
@@ -37,6 +40,11 @@ const Item = ({ item }) => {
             <Button size="small">Learn More</Button>
           </CardActions>
         </Card>
+            </Box>
+        </Grid>
+
+       </Grid>
+        
        
   );
 };
