@@ -12,6 +12,7 @@ const ItemCount = (props) => {
       <Stack spacing={2} direction="row" size="medium" m={2}>
         <Button
           variant="contained"
+          size="small"
           onClick={() => {
             if (contador < stock) {
               setContador(contador + 1);
@@ -23,6 +24,7 @@ const ItemCount = (props) => {
         <h1>{contador}</h1>
         <Button
           variant="contained"
+          size="small"
           onClick={() => {
             if (contador > initial) {
               setContador(contador - 1);
