@@ -17,7 +17,7 @@ const Item = ({item}) => {
           <CardMedia
             component="img"
             image= {item.image}
-            alt="Computadora"
+            alt="green iguana"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
