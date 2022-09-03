@@ -1,0 +1,131 @@
+[
+    {
+        "id": 1,
+        "name": "Notebook Asus",
+        "price": 465000,
+        "detail":
+          "Notebook ASUS ROG ZEPHYRUS 14 WQHD RYZEN 9 4900HS 16GB 1TB SSD NVMe RTX 2060",
+        "category": "Notebook",  
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30646_Notebook_Gamer_AORUS_XD_15.6__Core_I7_11800H_16GB__2x8GB__1TB_SSD_NVMe_RTX_3070_240Hz_W11_Home_316bec6c-grn.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Notebook XPG",
+        "price": 470000,
+        "detail":
+          "Notebook Gamer XPG XENIA 15.6 Core I7 11800H 32GB (2x16GB) 1TB SSD NVMe RTX 3070 165Hz W10",
+        "category": "Notebook",
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_26535_Notebook_ASUS_ROG_ZEPHYRUS_14__WQHD_RYZEN_9_4900HS_16GB_1TB_SSD_NVMe_RTX_2060_b8ffd6ee-grn.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Notebook Asus",
+        "price": 280000,
+        "detail":
+          "Notebook ASUS UX5401 OLED 14 Core I5 1135G7 8GB 512GB SSD W10 Home ",
+        "category": "Notebook",
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30592_Notebook_ASUS_UX5401_OLED__14__Core_I5_1135G7_8GB_512GB_SSD_W10_Home_f059b8fd-grn.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Notebook Aorus",
+        "price": 532000,
+        "detail":
+          "Notebook Gamer AORUS XD 15.6 Core I7 11800H 16GB (2x8GB) 1TB SSD NVMe RTX 3070 240Hz W11 Home",
+        "category": "Notebook",
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_30568_Notebook_Gamer_ASUS_ROG_ZEPHYRUS_G14_14__Ryzen_7_5800HS_16GB__2x8GB__512GB_SSD_RTX_3050_144Hz_W10_ANIME_MATRIX_5d444937-grn.jpg"
+      },
+
+      {
+        "id": 5,
+        "name": "Notebook Acer",
+        "price": 250000,
+        "detail":
+          "Notebook Gamer Acer NITRO 5 15.6 Core I5 10300H 8GB 1TB HDD GTX1650 W11 Home",
+        "category": "Notebook",
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_31309_Notebook_Gamer_Acer_NITRO_5_15.6__Core_I5_10300H_8GB_1TB_HDD_GTX1650_W11_Home_b12c2cc8-grn.jpg"
+      },
+
+      {
+        "id": 6,
+        "name": "Notebook Asus",
+        "price": 325000,
+        "detail":
+          "Notebook Gamer Asus TUF FX516 15.6 FHD Core I5 11300H 16GB 512GB SSD NVMe RTX 3050 Freedos 144hz",
+        "category": "Notebook",
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_32597_Notebook_Gamer_Asus_TUF_FX516_15.6__FHD_Core_I5_11300H_16GB_512GB_SSD_NVMe_RTX_3050_Freedos_144hz_6713aed9-grn.jpg"
+      },
+
+      {
+        "id": 7,
+        "name": "Monitor LG",
+        "price": 153000,
+        "detail":
+          "Monitor Gamer LG 34 UltraGear 34GL750 Ultra Wide Curvo 144Hz 1ms ",
+        "category": "Monitores",
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_17179_Monitor_Gamer_LG_34__UltraGear_34GL750_Ultra_Wide_Curvo_144Hz_1ms_2859a4b1-grn.jpg"
+      },
+
+      {
+        "id": 8,
+        "name": "Monitor BENQ",
+        "price": 188000,
+        "detail":
+          "Monitor Gamer BENQ Zowie 24.5 XL2546 240Hz",
+        "category": "Monitores",
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_33374_Monitor_Gamer_BENQ_Zowie_24.5__XL2546_240Hz_399926f4-grn.jpg"
+      },
+
+      {
+        "id": 9,
+        "name": "Monitor LG",
+        "price": 69000,
+        "detail":
+          "Monitor LG 26 26WQ500-B UltraWide 21:9 ",
+        "category": "Monitores",
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_33354_Monitor_LG_26__26WQ500-B_UltraWide_21_9_161a12c9-grn.jpg"
+      },
+
+      {
+        "id": 10,
+        "name": "Teclado Redragon",
+        "price": 5000,
+        "detail":
+          "Teclado Redragon Shiva K512 White RGB ESP",
+        "category": "Teclados",
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_28592_Teclado_Redragon_Shiva_K512_White_RGB_ESP_28459d4e-grn.jpg"
+      },
+
+      {
+        "id": 11,
+        "name": "Teclado Redragon",
+        "price": 10900,
+        "detail":
+          "Teclado Mecanico Inalambrico Redragon Draconic K530W-RGB White ",
+        "category": "Teclados",
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_21938_Teclado_Mecanico_Inalambrico_Redragon_Draconic_K530W-RGB_White_7dcf0bf5-grn.jpg"
+      },
+
+      {
+        "id": 12,
+        "name": "Teclado HP",
+        "price": 21900,
+        "detail":
+          "Teclado Mecanico HP HyperX Alloy Elite 2 RGB Switch Red LA",
+        "category": "Teclados",
+        "image":
+          "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_19905_Teclado_Mecanico_HP_HyperX_Alloy_Elite_2_RGB_Switch_Red_LA_72df56cb-grn.jpg"
+      }
+
+]
