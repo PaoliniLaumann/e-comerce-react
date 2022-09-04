@@ -6,27 +6,31 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "../App.css";
+import { CardActionArea } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-const Item = ({ item }) => {
+const Item = ({ product }) => {
+
+  const navegator= useNavigate()
+
   return (
     <Card sx={{ m: 2 }}>
-      <CardMedia component="img" image={item.image} alt="green iguana" />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {item.name}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-          Item: {item.id}
-        </Typography>
-        <Typography gutterBottom variant="h8" component="div">
-          $ {item.price}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {item.detail}
-        </Typography>
-      </CardContent>
-      <CardActions>        
-        <Button size="small">Detalles del Producto</Button>
+      <CardActionArea>
+        <CardMedia component="img" image={product.image} alt="technology" />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {product.name}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="div">
+          $ {product.price}
+          </Typography>          
+          <Typography variant="body2" color="text.secondary">
+            {product.detail}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" onClick={() => navegator(`/product/${product.id}`)}>Detalles del Producto</Button>
       </CardActions>
     </Card>
   );
