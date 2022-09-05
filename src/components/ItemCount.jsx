@@ -2,49 +2,52 @@ import React, { useState } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
-const ItemCount = (props) => {
-  const { stock, initial, onAdd } = props;
 
-  const [contador, setContador] = useState(initial);
+const ItemCount = ({ initial, stock, onAdd }) => {
+  const [count, setCount] = useState(initial);
 
   return (
-    <div>
-      <Stack spacing={2} direction="row" size="medium" m={2}>
+    <div >
+      <h1>Cant: {count} </h1>
+      <Stack spacing={2} direction="row" size="medium" m={2} >
+      
         <Button
           variant="contained"
           size="small"
           onClick={() => {
-            if (contador < stock) {
-              setContador(contador + 1);
-            }
-          }}
-        >
-          +
-        </Button>
-        <h1>{contador}</h1>
-        <Button
-          variant="contained"
-          size="small"
-          onClick={() => {
-            if (contador > initial) {
-              setContador(contador - 1);
+            if (count > initial) {
+              setCount(count - 1);
             }
           }}
         >
           -
         </Button>
+        
+
         <Button
+          variant="contained"
+          size="small"
+          onClick={() => {
+            if (count < stock) {
+              setCount(count + 1);
+            }
+          }}
+        >
+          +
+        </Button>
+        
+      </Stack>
+      <Button
           variant="contained"
           size="small"
           disableElevation
           onClick={() => {
-            onAdd(contador);
-            setContador(initial);
+            onAdd(count);
+            setCount(initial);
           }}
         >
           Agregar al Carrito
         </Button>
-      </Stack>
 
       <br />
     </div>

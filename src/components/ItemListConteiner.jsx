@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import ItemList from "./ItemList";
+import mock from "../mock/products.json";
+
 
 const ItemListConteiner = () => {
   const [loading, setLoading] = useState(true);
@@ -8,14 +10,14 @@ const ItemListConteiner = () => {
   const [error, setError] = useState(``);
 
   useEffect(() => {
-    fetch(`mock/products.json`)
-      .then((res) => res.json())
-      .then((json) => {
-        setProductos(json);
-      })
+    fetch(mock)    
+       .then((json) => {
+        setProductos(mock);
+      })      
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, []);
+  
 
   return (
     <div>
