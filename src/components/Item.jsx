@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 const Item = ({ product }) => {
 
-  const navegator= useNavigate()
+  const navegate= useNavigate()
 
   return (
     <Card sx={{ m: 2 }}>
@@ -30,7 +30,7 @@ const Item = ({ product }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" onClick={() => navegator(`/product/${product.id}`)}>Detalles del Producto</Button>
+        <Button size="small" onClick={() => navegate(`/product/${product.id}`)}>Detalles del Producto</Button>
       </CardActions>
     </Card>
   );
