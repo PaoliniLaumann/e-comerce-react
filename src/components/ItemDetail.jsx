@@ -18,7 +18,7 @@ const ItemDetail = ({ productDetail }) => {
     <Box>
       <Grid
         container
-        spacing={{ xs: 1, sm: 1, md: 2, xl: 1 }}
+        spacing={{ xs: 1, sm: 1, md: 2, xl: 2 }}
         columns={{ xs: 4, sm: 8, md: 10 }}
         className="cardConteiner"
       >

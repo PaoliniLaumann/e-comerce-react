@@ -30,10 +30,10 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{height:"7rem",  justifyContent: "center", backgroundColor:"brown", marginBottom: "2"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "nome" }, mr: 4 }} />
+          <AdbIcon sx={{ display: { xs: "none", md: "nome" }, mr: 1 }} />
           <Link to="/" style={{ textDecoration: "none" }}>
             <Typography
               variant="h4"
@@ -44,8 +44,8 @@ const NavBar = () => {
                 fontFamily: "monospace",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "black",
-                textDecoration: "none",
+                color: "white", 
+                justifyContent: "center"               
               }}
             >
               COMPU MUNDO
