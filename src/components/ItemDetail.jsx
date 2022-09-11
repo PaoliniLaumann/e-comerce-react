@@ -11,7 +11,7 @@ import { useState } from "react";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../Context/CardContext";
+import { useCart } from "../Context/CartContext";
 
 const ItemDetail = ({ productDetail }) => {
   const navegate = useNavigate();
