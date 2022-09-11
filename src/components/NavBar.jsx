@@ -30,7 +30,7 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="static" style={{height:"7rem",  justifyContent: "center", backgroundColor:"brown", marginBottom: "2"}}>
+    <AppBar position="static" style={{height:"7rem",  justifyContent: "center", backgroundColor:"black", marginBottom: "2"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "nome" }, mr: 1 }} />
