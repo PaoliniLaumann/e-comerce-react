@@ -12,6 +12,9 @@ import AdbIcon from "@mui/icons-material/Adb";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 
+
+
+
 const pages = [
   { enlace: "/category/Notebook", nombre: "Notebook" },
   { enlace: "/category/Monitores", nombre: "Monitores" },
@@ -19,6 +22,7 @@ const pages = [
 ];
 
 const NavBar = () => {
+ 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -122,8 +126,10 @@ const NavBar = () => {
               </MenuItem>
             ))}
           </Box>
-
-          <CartWidget />
+              <Box>
+                <CartWidget />                
+              </Box>
+          
         </Toolbar>
       </Container>
     </AppBar>

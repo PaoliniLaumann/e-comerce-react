@@ -34,7 +34,7 @@ const ItemDetail = ({ productDetail }) => {
     addItem(purchase)
   };
   return (
-    <Box>
+    <Box >
       <Grid
         container
         spacing={{ xs: 1, sm: 1, md: 2, xl: 2 }}
@@ -69,8 +69,8 @@ const ItemDetail = ({ productDetail }) => {
           <Card sx={{ m: 2 }}></Card>
         </Grid>
 
-        <Grid item xs={12} sm={4} md={3}>
-          <div sx={{ m: 3, textAlign: "center" }}>
+        <Grid item xs={12} sm={4} md={3} sx={{ m: 3, textAlign: "center" }}>
+          <div >
             <CardMedia component="img" image={image} alt="technology" />
           </div>
           <Card sx={{ m: 2 }}></Card>
