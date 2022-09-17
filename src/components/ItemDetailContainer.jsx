@@ -38,9 +38,3 @@ const ItemDetailContainer = () => {
 
 export default ItemDetailContainer;
 
-/* useEffect(() => {
-  fetch(mock)      
-    .then((res) => setProductDetail(mock[id]))
-    .catch((err) => console.log(err))
-    .finally(() => setLoading(false));
-},[id]); */

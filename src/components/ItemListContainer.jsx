@@ -40,8 +40,4 @@ const ItemListContainer = () => {
 };
 export default ItemListContainer;
 
-/* useEffect(() => {
-  categoryId ?  setProducts(mock.filter(products => products.category === categoryId)) : setProducts(mock) 
 
-}, [categoryId]); 
- */

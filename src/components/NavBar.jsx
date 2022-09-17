@@ -12,9 +12,6 @@ import AdbIcon from "@mui/icons-material/Adb";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 
-
-
-
 const pages = [
   { enlace: "/category/Notebook", nombre: "Notebook" },
   { enlace: "/category/Monitores", nombre: "Monitores" },
@@ -22,7 +19,6 @@ const pages = [
 ];
 
 const NavBar = () => {
- 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -34,8 +30,15 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="static" style={{height:"7rem",  justifyContent: "center", backgroundColor:"black", marginBottom: "2"}}>
-      <Container maxWidth="xl">
+    <AppBar
+      position="static"
+      style={{
+        height: "10rem",
+        justifyContent: "center",
+        backgroundColor: "black",
+      }}
+    >
+      <Container maxWidth="xxl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "nome" }, mr: 1 }} />
           <Link to="/" style={{ textDecoration: "none" }}>
@@ -43,13 +46,12 @@ const NavBar = () => {
               variant="h4"
               noWrap
               sx={{
-                mr: 2,
+                mr: "10rem",
                 display: { xs: "none", md: "flex" },
                 fontFamily: "monospace",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "white", 
-                justifyContent: "center"               
+                color: "white",
               }}
             >
               COMPU MUNDO
@@ -99,7 +101,7 @@ const NavBar = () => {
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             sx={{
               mr: 2,
@@ -126,10 +128,9 @@ const NavBar = () => {
               </MenuItem>
             ))}
           </Box>
-              <Box>
-                <CartWidget />                
-              </Box>
-          
+          <Box sx={{ ml: "1rem" }}>
+            <CartWidget />
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>

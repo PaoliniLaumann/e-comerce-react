@@ -1,3 +1,8 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
 .cardConteiner {
     display: flex;
     flex-direction: column;
@@ -5,3 +10,5 @@
     align-items: center;
        
 }
+
+
