@@ -75,7 +75,7 @@ const ItemDetail = ({ productDetail }) => {
           </div>
           <Card sx={{ m: 2 }}></Card>
         </Grid>
-        <Grid item xs={12} sm={4} md={3}>
+        <Grid item xs={12} sm={4} md={3} >
           <Card sx={{ m: 1, textAlign: "center" }}>
             <CardContent>
               <Typography variant="h3" component="div">

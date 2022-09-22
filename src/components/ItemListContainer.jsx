@@ -4,6 +4,8 @@ import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../firebase/firebase";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);
@@ -32,12 +34,18 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      <p>{loading ? `Loadin...` : null}</p>
+      {loading ? (
+        <Box
+          sx={{
+            alignItems: "center", display: "flex", justifyContent: "center", height: "60vh", width: "100vw"
+          }}
+        >
+          <CircularProgress size={100} color={"success"} />
+        </Box>
+      ) : null}
       <p>{error ? `Error` : null}</p>
       <ItemList products={products} />
     </div>
   );
 };
 export default ItemListContainer;
-
-

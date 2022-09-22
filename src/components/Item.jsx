@@ -15,7 +15,7 @@ const Item = ({ product }) => {
 
   return (
     <Card sx={{ m: 2 }}>
-      <CardActionArea>
+      <CardActionArea onClick={() => navegate(`/product/${product.id}`)}>
         <CardMedia component="img" image={product.image} alt="technology" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -30,7 +30,7 @@ const Item = ({ product }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" onClick={() => navegate(`/product/${product.id}`)}>Detalles del Producto</Button>
+        <Button size="small" variant="contained" color="success" style={{backgroundColor:"ActiveCaption"}} onClick={() => navegate(`/product/${product.id}`)}>Detalles del Producto</Button>
       </CardActions>
     </Card>
   );
