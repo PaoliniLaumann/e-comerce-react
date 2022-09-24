@@ -13,28 +13,31 @@ import Stack from "@mui/material/Stack";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../Context/CartContext";
 
+
 const ItemDetail = ({ productDetail }) => {
-  const navegate = useNavigate();
-  const [count, setCount] = useState(1);
-  const [buy, setBuy] = useState(false);
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate(-1);
+  };
+  const [count, setCount] = useState(1); 
   const { id, name, detail, price, stock, image, image1, image2, image3 } =
     productDetail;
-  const {addItem} = useCart()
-
+  const { addItem, isInCart } = useCart();
+ 
   const onAdd = () => {
-   let purchase = {
-    id,
-    name,                                      
-    price,
-    stock,
-    image,
-    quantity:count
-   }
-    setBuy(true);
-    addItem(purchase)
+    let purchase = {
+      id,
+      name,
+      price,
+      stock,
+      image,
+      quantity: count,
+    };
+    
+    addItem(purchase);
   };
   return (
-    <Box >
+    <Box>
       <Grid
         container
         spacing={{ xs: 1, sm: 1, md: 2, xl: 2 }}
@@ -70,12 +73,12 @@ const ItemDetail = ({ productDetail }) => {
         </Grid>
 
         <Grid item xs={12} sm={4} md={3} sx={{ m: 3, textAlign: "center" }}>
-          <div >
+          <div>
             <CardMedia component="img" image={image} alt="technology" />
           </div>
           <Card sx={{ m: 2 }}></Card>
         </Grid>
-        <Grid item xs={12} sm={4} md={3} >
+        <Grid item xs={12} sm={4} md={3}>
           <Card sx={{ m: 1, textAlign: "center" }}>
             <CardContent>
               <Typography variant="h3" component="div">
@@ -92,7 +95,7 @@ const ItemDetail = ({ productDetail }) => {
               </Typography>
             </CardContent>
             <CardActions className="cardConteiner">
-              {!buy ? (
+              {!isInCart(id) ? (
                 <ItemCount
                   stock={stock}
                   initial={1}
@@ -107,16 +110,23 @@ const ItemDetail = ({ productDetail }) => {
                       variant="contained"
                       size="small"
                       color="success"
-                      onClick={() => navegate(`/`)}
+                      onClick={() => navigate(`/`)}
                     >
                       Seguir Comprando
                     </Button>
                     <Button
                       variant="contained"
                       size="small"
-                      onClick={() => navegate(`/Cart`)}
+                      onClick={() => navigate(`/Cart`)}
                     >
                       Ir al Carrito
+                    </Button>
+                    <Button
+                      variant="contained"
+                      color="info"
+                      onClick={handleNavigate}
+                    >
+                      Volver
                     </Button>
                   </Stack>
                 </div>
@@ -125,6 +135,7 @@ const ItemDetail = ({ productDetail }) => {
           </Card>
         </Grid>
       </Grid>
+      <Stack direction="row" margin={2}></Stack>
     </Box>
   );
 };

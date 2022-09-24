@@ -14,8 +14,11 @@ import { Stack } from "@mui/system";
 
 const Cart = () => {
   const { cart, clear, cartTotal } = useCart();
-  const navegate = useNavigate();
+  const navigate = useNavigate();
 
+  const handleNavigate = () => {
+    navigate(-1);
+  };
   return (
     <div>
       {!cart.length ? (
@@ -27,8 +30,8 @@ const Cart = () => {
           sx={{ textAlign: "center" }}
           style={{ backgroundColor: "#8bc34a" }}
         >
-          <Card sx={{ m: 7 }} style={{ backgroundColor: "#8bc34a" }}>
-            <CardActionArea onClick={() => navegate("/")}>
+          <Card sx={{ m: 9 }} style={{ backgroundColor: "#8bc34a" }}>
+            <CardActionArea onClick={() => navigate("/")}>
               <Typography gutterBottom variant="h3" component="div">
                 Tu carrito esta vacio!
               </Typography>
@@ -60,8 +63,13 @@ const Cart = () => {
               >
                 Vaciar carrito
               </Button>
-              <Button variant="contained" color="success">
+              <Button variant="contained" color="success" onClick={() => navigate("/checkout")}>
                 Terminar Compra
+              </Button>
+            </Stack>
+            <Stack direction="row" margin={2} marginBottom={4}>
+              <Button variant="contained" color="info" onClick={handleNavigate}>
+                Volver
               </Button>
             </Stack>
           </div>

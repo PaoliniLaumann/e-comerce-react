@@ -14,3 +14,12 @@
 .logo {
     width: 10rem;
 }
+
+.formStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    text-align: center;
+    margin: 10rem
+}

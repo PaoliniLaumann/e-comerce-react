@@ -35,7 +35,7 @@ const ItemCount = ({ initial, stock, onAdd, count, setCount }) => {
         disableElevation
         onClick={() => {
           onAdd(count);
-          setCount(initial);
+          setCount(initial);          
         }}
       >
         Agregar al Carrito

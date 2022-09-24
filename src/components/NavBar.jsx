@@ -33,7 +33,7 @@ const NavBar = () => {
     <AppBar
       position="static"
       style={{
-        height: "10rem",
+        height: "8rem",
         justifyContent: "center",
         backgroundColor: "black",
       }}

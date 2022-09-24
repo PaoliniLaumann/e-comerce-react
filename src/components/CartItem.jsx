@@ -23,7 +23,7 @@ const CartItem = ({cart}) => {
           rowSpacing={3}
           className="cardConteiner"
         >
-          <Grid item md={3}>
+          <Grid item md={3} sx={{m:2}}>
             <CardMedia
               component="img"
               image={cart.image}
