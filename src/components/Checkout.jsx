@@ -10,6 +10,7 @@ import Swal from "sweetalert2";
 import { Stack } from "@mui/system";
 import { useNavigate } from "react-router-dom";
 
+
 const Checkout = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -23,10 +24,12 @@ const Checkout = () => {
 
   const [idPurchase, setIdPurchase] = useState("");
 
-  const { cart, cartTotal, clear } = useCart();
+  const { cart, cartTotal, clear } = useCart();  
+ 
 
   const endPurchase = () => {
-    if (name === "" || phone === "" || email === "") {
+    
+    if (name.length < 6 || phone === "" || email === "") {
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -89,6 +92,7 @@ const Checkout = () => {
           id="outlined-required"
           label="Nombre y Apellido"
           value={name}
+          type="text"
           onChange={(e) => setName(e.target.value)}
         />
         <br />
@@ -96,8 +100,10 @@ const Checkout = () => {
           required
           id="outlined-required"
           label="Telefono"
+          type="text"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
+          inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
         />
         <br />
         <TextField

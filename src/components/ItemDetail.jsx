@@ -24,8 +24,8 @@ const ItemDetail = ({ productDetail }) => {
     productDetail;
   const { addItem, isInCart } = useCart();
  
-  const onAdd = () => {
-    let purchase = {
+  const addItemCart = () =>{
+    const itemToAdd = {
       id,
       name,
       price,
@@ -34,7 +34,7 @@ const ItemDetail = ({ productDetail }) => {
       quantity: count,
     };
     
-    addItem(purchase);
+    addItem(itemToAdd)
   };
   return (
     <Box>
@@ -99,7 +99,7 @@ const ItemDetail = ({ productDetail }) => {
                 <ItemCount
                   stock={stock}
                   initial={1}
-                  onAdd={onAdd}
+                  onAdd={addItemCart}
                   count={count}
                   setCount={setCount}
                 />
