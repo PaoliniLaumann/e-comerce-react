@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../Context/CartContext";
 
 
+
 const ItemDetail = ({ productDetail }) => {
   const navigate = useNavigate();
   const handleNavigate = () => {

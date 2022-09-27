@@ -7,10 +7,10 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const { saveStorage, getStorage, checkStorage } = useStorage();
 
-  useEffect(() => {
+  useEffect(() => {    
     checkStorage();
     setCart(getStorage("cart"));
-  }, [setCart]);
+  }, []);
 
   const addItem = (item) => {
     let newData = [...cart, item];
@@ -37,22 +37,7 @@ export const CartProvider = ({ children }) => {
     setCart([...cart]);
     saveStorage("cart", cart);
   };
-  /*  const addItem = (item) => {
-    const existsInCart = cart.find((prod) => prod.id === item.id);
-    if (existsInCart) {
-      const updatedCart = cart.map((prod) => {
-        if (prod.id === item.id) {
-          return { ...prod, quantity: prod.quantity + item.quantity };
-        } else {
-          return prod;
-        }
-      });
-      setCart(updatedCart);
-    } else {
-      setCart([...cart, item]);
-    }
-  }; */
-
+ 
   const clear = () => {
     saveStorage("cart", []);
     setCart([]);
