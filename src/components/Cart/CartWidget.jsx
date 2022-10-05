@@ -1,6 +1,6 @@
 import React from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import { useCart } from "../Context/CartContext";
+import { useCart } from "../../Context/CartContext";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 

@@ -1,6 +1,8 @@
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
+
+
 const ItemCount = ({ initial, stock, onAdd, count, setCount }) => {
   return (
     <div>
@@ -35,12 +37,13 @@ const ItemCount = ({ initial, stock, onAdd, count, setCount }) => {
         disableElevation
         onClick={() => {
           onAdd(count);
-          setCount(initial);          
+          setCount(initial); 
+             
         }}
       >
         Agregar al Carrito
       </Button>
-
+     
       <br />
     </div>
   );

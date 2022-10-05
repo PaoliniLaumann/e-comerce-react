@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import "../App.css";
+import "../../App.css"
 import { CardActionArea } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const Item = ({ product }) => {
   const navegate= useNavigate()
 
   return (
-    <Card sx={{ m: 2 }}>
+    <Card elevation={6} sx={{ m: 2 }}>
       <CardActionArea onClick={() => navegate(`/product/${product.id}`)}>
         <CardMedia component="img" image={product.image} alt="technology" />
         <CardContent>

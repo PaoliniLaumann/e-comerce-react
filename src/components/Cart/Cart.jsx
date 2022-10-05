@@ -1,8 +1,8 @@
 import { Button, Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 import React from "react";
-import { useCart } from "../Context/CartContext";
-import CartItem from "./CartItem";
+import { useCart } from "../../Context/CartContext";
+import CartItem from "../Cart/CartItem";
 import { useNavigate } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -30,7 +30,7 @@ const Cart = () => {
           sx={{ textAlign: "center" }}
           style={{ backgroundColor: "#8bc34a" }}
         >
-          <Card sx={{ m: 9 }} style={{ backgroundColor: "#8bc34a" }}>
+          <Card sx={{ m: 9 }} elevation={7} style={{ backgroundColor: "#8bc34a" }}>
             <CardActionArea onClick={() => navigate("/")}>
               <Typography gutterBottom variant="h3" component="div">
                 Tu carrito esta vacio!

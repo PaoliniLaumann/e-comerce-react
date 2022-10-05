@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "./Item";
+import Item from "../../components/Cards/Item";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 

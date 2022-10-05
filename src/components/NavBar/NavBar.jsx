@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import CartWidget from "./CartWidget";
+import CartWidget from "../Cart/CartWidget";
 import { Link } from "react-router-dom";
 
 const pages = [
@@ -48,7 +48,7 @@ const NavBar = () => {
               sx={{
                 mr: "10rem",
                 display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
+                fontFamily: "BlinkMacSystemFont",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
                 color: "white",
@@ -98,8 +98,8 @@ const NavBar = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          </Box>    
+          <Link to="/" style={{ textDecoration: "none" }}></Link>
           <Typography
             variant="h6"
             noWrap
@@ -107,7 +107,7 @@ const NavBar = () => {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: "BlinkMacSystemFont",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",

@@ -1,5 +1,5 @@
 import React from "react";
-import ItemCount from "./ItemCount";
+import ItemCount from "../Cards/ItemCount";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -11,8 +11,8 @@ import { useState } from "react";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../Context/CartContext";
-
+import { useCart } from "../../Context/CartContext";
+import {AddedCartAlert} from "../helpers/alerts/AddedCartAlert";
 
 
 const ItemDetail = ({ productDetail }) => {
@@ -34,7 +34,7 @@ const ItemDetail = ({ productDetail }) => {
       image,
       quantity: count,
     };
-    
+    AddedCartAlert();
     addItem(itemToAdd)
   };
   return (
@@ -80,7 +80,7 @@ const ItemDetail = ({ productDetail }) => {
           <Card sx={{ m: 2 }}></Card>
         </Grid>
         <Grid item xs={12} sm={4} md={3}>
-          <Card sx={{ m: 1, textAlign: "center" }}>
+          <Card elevation={7} sx={{ m: 1, textAlign: "center"}}>
             <CardContent>
               <Typography variant="h3" component="div">
                 {name}

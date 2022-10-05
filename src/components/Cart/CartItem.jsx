@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { useCart } from "../Context/CartContext";
+import { useCart } from "../../Context/CartContext";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
@@ -33,7 +33,7 @@ const CartItem = ({ cart }) => {
           />
         </Grid>
         <Grid item md={3}>
-          <Card sx={{ m: 2, textAlign: "center" }}>
+          <Card elevation={4} sx={{ m: 2, textAlign: "center" }}>
             <CardContent>
               <Typography
                 gutterBottom
