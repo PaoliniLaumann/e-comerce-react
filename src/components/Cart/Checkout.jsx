@@ -5,17 +5,12 @@ import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import { useState } from "react";
 import { useCart } from "../../Context/CartContext";
-import {
-  addDoc,
-  collection,
-  getFirestore,
-  Timestamp,
-} from "firebase/firestore";
+import { addDoc, collection, getFirestore, Timestamp, documentId, getDocs, query, where, writeBatch,} from "firebase/firestore";
 import { Stack } from "@mui/system";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Grid, Paper, Typography } from "@mui/material";
-
+import { CheckoutFail } from "../helpers/alerts/CheckoutFail";
 const Checkout = () => {
   const [buttonOff, setButtonOff] = useState(false);
 
@@ -37,7 +32,7 @@ const Checkout = () => {
 
   const { cart, cartTotal, clear } = useCart();
 
-  const endPurchase = (data) => {
+  const endPurchase = async (data) => {
     setButtonOff(true);
 
     let orderPurchase = {
@@ -49,10 +44,41 @@ const Checkout = () => {
 
     const db = getFirestore();
     const myCollection = collection(db, `orders`);
-    addDoc(myCollection, orderPurchase).then(({ id }) => {
-      setIdPurchase(id);
-      clear();
+    const batch = writeBatch(db);
+    const productsRef = collection(db, "products");
+    const q = query(
+      productsRef,
+      where(
+        documentId(),
+        "in",
+        cart.map((item) => item.id)
+      )
+    );
+    const products = await getDocs(q);
+
+    const outOfStock = [];
+
+    products.docs.forEach((doc) => {
+      const itemToUpdate = cart.find((item) => item.id === doc.id);
+      const dataStock = doc.data().stock;
+
+      if (dataStock >= itemToUpdate.quantity) {
+        batch.update(doc.ref, {
+          stock: dataStock - itemToUpdate.quantity,
+        });
+      } else {
+        outOfStock.push(itemToUpdate);
+      }
     });
+    if (outOfStock.length === 0) {
+      batch.commit();
+      addDoc(myCollection, orderPurchase).then(({ id }) => {
+        setIdPurchase(id);
+        clear();
+      });
+    } else {
+      CheckoutFail();
+    }
   };
 
   if (idPurchase) {
@@ -128,7 +154,6 @@ const Checkout = () => {
                 }}
               >
                 <TextField
-                  /*  id="outlined-required" */
                   label="Telefono"
                   inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
                   helperText={errors.phone ? "Ingrese un teléfono valido" : ""}

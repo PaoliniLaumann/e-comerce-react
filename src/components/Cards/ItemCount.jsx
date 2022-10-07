@@ -1,5 +1,6 @@
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import StockFail from "../helpers/alerts/StockFail";
 
 
 
@@ -35,10 +36,9 @@ const ItemCount = ({ initial, stock, onAdd, count, setCount }) => {
         variant="contained"
         size="small"
         disableElevation
-        onClick={() => {
-          onAdd(count);
-          setCount(initial); 
-             
+        onClick={() => {(stock < 1) ? StockFail() 
+        : onAdd(count);
+          setCount(initial);              
         }}
       >
         Agregar al Carrito
