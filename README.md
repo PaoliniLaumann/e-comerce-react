@@ -22,8 +22,8 @@ Develop mode
 React Router Dom
 `npm install react-router-dom`
 
-React Icons
-`npm install react-icons --save`
+Material UI v 5.10.1
+`npm install @mui/material @emotion/react @emotion/styled`
 
 Firebase v 8.9.1
 `npm install firebase@9.10.0`
