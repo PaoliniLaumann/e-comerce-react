@@ -3,9 +3,9 @@
 
 ## Descripción
 <h3>Este proyecto lo estoy realizando para el curso de React en Coderhouse, Sera un E-comerce de productos tecnologicos</h3>
-<h3>Como herramientas extra se utilizan "Material UI", "React Router DOM" y se agrega "Sweet Alert" para algunas interacciones con el usuario. </h3>
+<h3>Como herramientas extra se utilizan "Material UI" como libreria principal para el estilo del sitio , "React Router DOM" para implementar enrutamiento dinámico en la aplicación web y se agrega "Sweet Alert" para algunas interacciones con el usuario. </h3>
 <h3 >Se utiliza React Hook Form para realizar la validacion del formulario de Compra </h3>
-<h3>Como base de datos se utiliza Firebase</h3>
+<h3>Como base de datos se utiliza Firebase tanto como para carga de los productos como para las ordenes de compra y manejo de stock</h3>
 
 # [![CSS](https://img.shields.io/badge/Link%20al%20sitio-blueviolet)](https://e-comerce-react-lime.vercel.app/)
 
@@ -36,7 +36,7 @@ Sweet Alert 2
 
 ### Home
 
-La web consta de una página principal donde se puede ver todos los productos que hay en la pagina. En la barra de navegación se puede elegir entre las tres categorías de productos para visualizar. El logo de Home lleva nuevamente a la visualización de todos los productos 
+La web consta de una página principal donde se puede ver todos los productos que hay en la pagina. En la barra de navegación se puede elegir entre las tres categorías de productos para visualizar. El logo de Home lleva nuevamente a la visualización de todos los productos. Tambien contamos con el icono del Carrito donde nos muestra cantidad de productos agregados y sirve como un vinculo rapido para navegar hacia el. 
 
 [![home.jpg](https://i.postimg.cc/44FdvDT4/home.jpg)](https://postimg.cc/vDfbbSBC)
 
@@ -50,13 +50,13 @@ La vista de Categorias es la siguiente:
 
 ### Detalle de Producto
 
-Cada card de productos muestra una imagen, el nombre del producto y tiene un botón que lleva a un detalle que muestra una breve información y calificación del producto. El detalle  lleva a la pagina de descripcion del producto y tres images mas, donde se puede agregar al carrito. El id del producto es agregado automaticamente por firebase.
+Cada card de productos muestra una imagen principal mas tres imagenes con diferentes vistas, un detalle que muestra una breve información del producto, cantidad en stock y la botonera para agregar cantidad de productos al carrito. El id del producto es agregado automaticamente por firebase.
 
 [![detalle.jpg](https://i.postimg.cc/ZncKdQZ3/detalle.jpg)](https://postimg.cc/LgJpdNJ6)
 
 ### Carrito
 
-El carrito muestra la totalidad de los productos elegidos y dispone de un contador para agregar o quitar cantidades del producto. Tiene un máximo según stock del producto. Además tiene botones para borrar individualmente los productos y la totalidad.
+El carrito muestra la totalidad de los productos elegidos y dispone nuevamente de un contador para agregar o quitar cantidades del producto. Tiene un máximo según stock del producto. Además tiene botones para borrar individualmente los productos y la totalidad.
  
 
 [![carrito.jpg](https://i.postimg.cc/pL9RWr9K/carrito.jpg)](https://postimg.cc/hXqHMS1G)
@@ -65,7 +65,7 @@ El carrito muestra la totalidad de los productos elegidos y dispone de un contad
 
 El formulario de generación de la orden consta con una validación completa, donde no se pueden dejar secciones vacías, introducir letras en el numero de telefono o numeros en el nombre. Además el e-mail debe si o si tener la estructura de un mail real para poder validarse. Todos los campos responden con un error si se introduce información inválida.
 
-Al introducir correctamente la información, se muestra un cartel de éxito en la compra con la id del pedido, otorgada automaticamente por firebase.
+Al introducir correctamente la información, se muestra un cartel de éxito en la compra con la id del pedido, otorgada automaticamente por firebase y automaticamente descuenta del stock inicial.
 
 [![formulario.jpg](https://i.postimg.cc/zXv17vF4/formulario.jpg)](https://postimg.cc/mhvq2bqS)
 
