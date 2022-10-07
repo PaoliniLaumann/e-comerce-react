@@ -1,9 +1,9 @@
 
-<h1 align="center">Soy German Paolini Laumann</h1>
+<h1 align="center">Hola! Soy German Paolini Laumann</h1>
 
 ## Descripción
 <h3>Este proyecto lo estoy realizando para el curso de React en Coderhouse, Sera un E-comerce de productos tecnologicos</h3>
-<h3>Como herramientas extra se utilizan "Material UI" como libreria principal para el estilo del sitio , "React Router DOM" para implementar enrutamiento dinámico en la aplicación web y se agrega "Sweet Alert" para algunas interacciones con el usuario. </h3>
+<h3>Como herramientas extra se utilizan "Material UI" como libreria principal para el estilo del sitio , "React Router DOM" para implementar enrutamiento dinámico en toda la aplicación web y se agrega "Sweet Alert" para algunas interacciones con el usuario. </h3>
 <h3 >Se utiliza React Hook Form para realizar la validacion del formulario de Compra </h3>
 <h3>Como base de datos se utiliza Firebase tanto como para carga de los productos como para las ordenes de compra y manejo de stock</h3>
 
@@ -56,7 +56,7 @@ Cada card de productos muestra una imagen principal mas tres imagenes con difere
 
 ### Carrito
 
-El carrito muestra la totalidad de los productos elegidos y dispone nuevamente de un contador para agregar o quitar cantidades del producto. Tiene un máximo según stock del producto. Además tiene botones para borrar individualmente los productos y la totalidad.
+El carrito muestra la totalidad de los productos elegidos y dispone nuevamente de un contador para agregar o quitar cantidades del producto. Tiene un máximo según stock del producto. Además tiene botones para borrar individualmente los productos y la totalidad. Aqui se utiliza el Local Storage para mejorar la experiencia de usuario.
  
 
 [![carrito.jpg](https://i.postimg.cc/pL9RWr9K/carrito.jpg)](https://postimg.cc/hXqHMS1G)
