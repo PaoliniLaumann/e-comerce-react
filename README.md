@@ -7,9 +7,9 @@
 <h3 >Se utiliza React Hook Form para realizar la validacion del formulario de Compra </h3>
 <h3>Como base de datos se utiliza Firebase</h3>
 
-# [![CSS](https://img.shields.io/badge/Link%20al%20sitio-blueviolet)](e-comerce-react-git-main-paolinilaumann.vercel.app)
+# [![CSS](https://img.shields.io/badge/Link%20al%20sitio-blueviolet)](https://e-comerce-react-lime.vercel.app/)
 
-# [Compu Mundo - App con React.js](e-comerce-react-git-main-paolinilaumann.vercel.app)
+# [Compu Mundo - App con React.js](https://e-comerce-react-lime.vercel.app/)
 
 ## COMANDOS
 
